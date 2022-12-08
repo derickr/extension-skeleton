@@ -1,10 +1,10 @@
-PHP_ARG_ENABLE([observer],
-  [whether to enable observer support],
-  [AS_HELP_STRING([--enable-observer],
-    [Enable observer support])],
+PHP_ARG_ENABLE([skeleton],
+  [whether to enable skeleton support],
+  [AS_HELP_STRING([--enable-skeleton],
+    [Enable skeleton support])],
   [yes])
 
-if test "$PHP_OBSERVER" != "no"; then
-  AC_DEFINE(HAVE_OBSERVER, 1, [ Have observer support ])
-  PHP_NEW_EXTENSION(observer, observer.c, $ext_shared)
+if test "$PHP_skeleton" != "no"; then
+  AC_DEFINE(HAVE_skeleton, 1, [ Have skeleton support ])
+  PHP_NEW_EXTENSION(skeleton, skeleton.c, $ext_shared)
 fi
